@@ -1,4 +1,17 @@
-# Group-Three Users App
+# Group-Three Users Data App
+The User Data Application is an Angular-based web application designed to manage user-related information. It provides functionalities for handling user data, including names, IDs, and images.
+
+## Contributors
+
+This project is developed and maintained by the following contributors:
+
+1. [Omoma Ighawosa](https://github.com/Ig-Matrix)
+2. [Damilola Adefihan](https://github.com/Damilola-Adefihan)
+3. [Tolu John](https://github.com/Tolu-John)
+4. [Faith Samson](https://github.com/moongenevieve)
+5. [Idowu Adeyinka](https://github.com/Idowu007)
+6. [Samuel Bamigbola](https://github.com/Smartsamsive)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
 
