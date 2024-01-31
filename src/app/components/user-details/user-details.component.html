@@ -17,7 +17,7 @@
                             [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
                     </div>
                     <div class="flex">
-                        <div class="basis-5/12 p-6 ps-0 flex flex-col items-center justify-center  ">
+                        <div class="basis-[100%] sm:basis-5/12 p-6 ps-0 flex flex-col items-center justify-center  ">
                             <h3 class="mt-2 text-black font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
                             <p class="font-semibold my-2">{{userDetails?.address?.street}},
                                 {{userDetails?.address?.city}}</p>
@@ -25,11 +25,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottom p-2 shadow-sm">
+                <div class=" p-2 shadow-sm">
                     <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans mt-8">Company</h4>
                     <div class="hero">
-                        <div
-                            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <div class="h-full flex flex-row  items-center justify-start text-center">
                             <img alt="team"
                                 class="flex-shrink-0 rounded-full w-20 h-20 object-cover object-center sm:mb-0 mb-4"
                                 [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
@@ -47,7 +46,7 @@
                         id.</p>
                 </div>
             </div>
-            <div class="">
+            <div class="p-4 sm:p-0">
                 <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans">About</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maxime voluptate inventore neque
                     excepturi?
@@ -62,7 +61,6 @@
             </div>
 
         </div>
-
     </section>
 
 </div>
