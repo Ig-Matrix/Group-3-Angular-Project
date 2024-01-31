@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
+import { CardComponent } from '../card/card.component';
+import { User } from '../../models/Users';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
   imports: [CardComponent, FormsModule],
   templateUrl: './user-list.component.html',
-  styleUrl: './user-list.component.css'
+  styleUrl: './user-list.component.css',
 })
-export class UserListComponent {
+export class UserListComponent implements OnInit {
   title = 'User List';
   users: User[] = [];
 
@@ -23,5 +27,4 @@ export class UserListComponent {
       .getUsers()
       .subscribe((response) => (this.users = response));
   }
-  
 }

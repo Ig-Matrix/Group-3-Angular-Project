@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/Users';
 import { UserDetails } from '../models/UserDetails';
+import { USER_BASE_URL } from '../config/api.config';
 
 @Injectable({
   providedIn: 'root',
