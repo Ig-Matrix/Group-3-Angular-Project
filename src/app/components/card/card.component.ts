@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../../models/Data';
 import { RouterLink } from '@angular/router';
+import { User } from '../../models/Users';
 
 @Component({
   selector: 'app-card',
@@ -9,8 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
-export class CardComponentComponent {
- 
+export class CardComponent {
   @Input()
   user: User | undefined;
 
