@@ -5,11 +5,12 @@ import { User } from '../../models/Users';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [CardComponent, FormsModule, SearchComponent],
+  imports: [CardComponent, FormsModule, SearchComponent, NavbarComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css',
 })
