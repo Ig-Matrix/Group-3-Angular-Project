@@ -20,10 +20,10 @@
                     </div>
                     <div class="flex">
                         <div class="basis-[100%] sm:basis-6/12 p-6 ps-0 flex flex-col items-center justify-center  ">
-                            <h3 class="mt-2 text-black font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
+                            <h3 class="mt-2 text-white font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
                             <p class="font-semibold my-2">{{userDetails?.address?.street}},
                                 {{userDetails?.address?.city}}</p>
-                            <a class="cursor-pointer hover:text-black"><fa-icon [icon]="faLink"></fa-icon> https://www.{{userDetails?.website}}</a>
+                            <a class="cursor-pointer text-blue-400 hover:text-gray-400"><fa-icon class='text-gray-400' [icon]="faLink"></fa-icon> https://www.{{userDetails?.website}}</a>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             <img alt="company image"
                                 class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
                                 src="../../../assets/images/max-bender-3rNvnnO7avY-unsplash.jpg" />
-                            <div class="flex-grow pl-8 text-black">
+                            <div class="flex-grow pl-8 text-white">
                                 <h2 class="title-font font-semibold text:sm sm:text-lg">{{ userDetails?.company?.name }} Ltd</h2>
                                 <h3 class="text-gray-500 mb-1 sm:mb-2 text-[0.7rem] sm:text-sm font-mono">{{ userDetails?.company?.catchPhrase }}</h3>
                                 <h5 class="text-gray-700">June 2015 - Present</h5>
