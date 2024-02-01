@@ -4,11 +4,12 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, NavbarComponent],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css',
 })
