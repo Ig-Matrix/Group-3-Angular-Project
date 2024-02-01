@@ -1,1 +1,33 @@
-<p>user-list works!</p>
+<app-navbar></app-navbar>
+<section class="text-gray-400 body-font bg-black">
+  <div class="container px-5 mx-auto">
+    <h1 class="font-bold text-3xl text-white my-4">{{title}}</h1>
+
+    <app-search (searchTextChange)="onSearchTextEntered($event)"></app-search>
+    @if (isLoading) {
+    <div class="flex justify-center items-center my-4">
+      <div class="animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-gray-700 border-b-gray-700"></div>
+      <p class="ml-4">Loading users...</p>
+    </div>
+    }@else {
+    @if (searchText) {
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4">
+      @if (filteredUsers.length > 0) {
+      @for (user of filteredUsers; track user.id) {
+      <app-card [user]="user"></app-card>
+      }
+      }@else {
+      <p class="text-center my-4 font-bold">No such user found.</p>
+      }
+    </div>
+    }@else {
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4">
+      @for (user of users; track user.id) {
+      <app-card [user]="user"></app-card>
+      }
+    </div>
+
+    }
+    }
+  </div>
+</section>
