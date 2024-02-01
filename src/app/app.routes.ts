@@ -8,5 +8,5 @@ export const routes: Routes = [
     {path: '', title:'Home', component: LandingPageComponent},
     {path: 'users', title:'Users', component: UserListComponent},
     { path: 'user/:id', component: UserDetailsComponent },
-    { path: '**', component: Error404Component },
+    { path: '**', title:'404', component: Error404Component },
 ];
