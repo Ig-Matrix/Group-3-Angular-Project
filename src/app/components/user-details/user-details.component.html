@@ -1,1 +1,67 @@
-<p>user-details works!</p>
+@if(isLoading) {
+<div class="flex justify-center items-center my-4">
+    <div class="animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-gray-700 border-b-gray-700"></div>
+    <p class="ml-4">Loading users...</p>
+</div>
+}
+@else {
+<div class="">
+    <header class="head">
+    </header>
+    <section class="text-gray-400 body-font">
+        <div class=" container grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-2 ps-8">
+                <div class="top relative  shadow-sm">
+                    <div class="absolute border-[6px]  border-white bg-slate-400 rounded-full -top-28 left-14 mb-20">
+                        <img alt="team" class=" rounded-full w-32 h-32 object-cover "
+                            [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
+                    </div>
+                    <div class="flex">
+                        <div class="basis-[100%] sm:basis-5/12 p-6 ps-0 flex flex-col items-center justify-center  ">
+                            <h3 class="mt-2 text-black font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
+                            <p class="font-semibold my-2">{{userDetails?.address?.street}},
+                                {{userDetails?.address?.city}}</p>
+                            <p><fa-icon [icon]="faLink"></fa-icon> {{userDetails?.website}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" p-2 shadow-sm">
+                    <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans mt-8">Company</h4>
+                    <div class="hero">
+                        <div class="h-full flex flex-row  items-center justify-start text-center">
+                            <img alt="team"
+                                class="flex-shrink-0 rounded-full w-20 h-20 object-cover object-center sm:mb-0 mb-4"
+                                [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
+                            <div class="flex-grow sm:pl-8 text-black">
+                                <h2 class="title-font font-medium text-lg">{{ userDetails?.company?.name }}</h2>
+                                <h3 class="text-gray-500 mb-3 font-mono">{{ userDetails?.company?.catchPhrase }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="font-semibold">About Company</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab recusandae magnam, sint, id minus
+                        nobis atque
+                        qui magni, accusamus possimus alias. Excepturi doloremque, voluptate exercitationem quod aliquam
+                        enim illum
+                        id.</p>
+                </div>
+            </div>
+            <div class="p-4 sm:p-0">
+                <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans">About</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maxime voluptate inventore neque
+                    excepturi?
+                    Error corrupti rerum earum optio! Omnis molestias iure asperiores sint sit quas nam necessitatibus
+                    magni
+                    dolor.</p>
+                <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans">Contact Info</h4>
+                <p>{{userDetails?.address?.suite}},{{userDetails?.address?.street}}, {{userDetails?.address?.city}}.
+                    {{userDetails?.address?.zipcode}}</p>
+                <p class="my-2">{{userDetails?.email}}</p>
+                <p>{{userDetails?.phone}}</p>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+}

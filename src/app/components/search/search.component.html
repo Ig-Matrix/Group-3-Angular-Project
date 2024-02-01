@@ -1,0 +1,6 @@
+<div class="relative">
+    <fa-icon [icon]="faSearch" class="absolute left-2 top-[0.35rem] md:top-2 text-slate-300"></fa-icon>
+    <input type="search" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()" placeholder="Search users"
+        class="border py-1 w-[18rem] md:py-2 mx-auto ps-9 md:w-[35rem] rounded-sm" />
+    <fa-icon [icon]="faSliders" class="ms-4"></fa-icon>
+</div>

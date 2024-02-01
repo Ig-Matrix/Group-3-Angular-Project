@@ -1,1 +1,14 @@
-<p>card works!</p>
+<div class="p-8 px-5 border shadow-md rounded-sm ">
+    <div class="h-full flex sm:flex-row items-center sm:justify-start text-center sm:text-left">
+        <img alt="{{user?.name}}" class="flex-shrink-0 rounded-full w-20 h-20 object-cover object-center sm:mb-0 mb-4"
+            [src]="'https://robohash.org/' + (user?.username ? user?.username : 'bret') + '?size=200x200&set=set3'" />
+        <div class="flex-grow sm:pl-8 text-black">
+            <h2 class="title-font font-medium text-lg ">{{user?.name}}</h2>
+            <h3 class="text-gray-500 mb-3">{{user?.email}}</h3>
+        </div>
+    </div>
+    <div class="py-8">
+        <button class="text-white bg-blue-900 px-6 py-2 rounded-md hover:bg-[#FD5956]">
+            <a [routerLink]="['/user', user?.id]" routerLinkActive="router-link-active">View Details</a> </button>
+    </div>
+</div>
