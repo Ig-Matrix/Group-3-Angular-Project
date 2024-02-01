@@ -2,3 +2,59 @@
     filter: drop-shadow(0 0 4px white) drop-shadow(0 0 4px white) drop-shadow(0 0 4px white);
     margin-right: 10px;
   }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(-250px * 5)); /* Adjust distance as needed */
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+
+  .slider {
+    background: black;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 90vw;
+  }
+  
+  .slider::before,
+  .slider::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slide-track {
+    animation: scroll 30s linear;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    display: flex;
+    width: calc(300px * 6);
+  }
+  
+  .slide {
+    width: 50vw;
+  }
+
+
