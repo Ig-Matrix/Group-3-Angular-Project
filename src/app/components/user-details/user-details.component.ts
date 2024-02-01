@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDetails } from '../../models/UserDetails';
-import { faEnvelope, faLink, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,9 +15,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class UserDetailsComponent implements OnInit {
   faLink = faLink;
-  faLocationDot=faLocationDot;
-  faPhone=faPhone;
-  faEnvelope=faEnvelope;
   userDetails: UserDetails | undefined;
   isLoading = true;
 

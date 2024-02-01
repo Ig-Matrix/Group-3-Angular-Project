@@ -3,7 +3,7 @@
 @if(isLoading) {
 <div class="flex justify-center items-center my-4">
     <div class="animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-gray-700 border-b-gray-700"></div>
-    <p class="ml-4">Loading user...</p>
+    <p class="ml-4">Loading users...</p>
 </div>
 }
 @else {
@@ -11,33 +11,32 @@
     <header class="head">
     </header>
     <section class="text-gray-400 body-font">
-        <div class=" grid grid-cols-1 md:grid-cols-2 gap-6 ">
-            <div class="p-2 ps-8 border-r-2">
+        <div class=" container grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-2 ps-8">
                 <div class="top relative  shadow-sm">
                     <div class="absolute border-[6px]  border-white bg-slate-400 rounded-full -top-28 left-14 mb-20">
-                        <img alt="{{userDetails?.name}}" class=" rounded-full w-32 h-32 object-cover "
+                        <img alt="team" class=" rounded-full w-32 h-32 object-cover "
                             [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
                     </div>
                     <div class="flex">
-                        <div class="basis-[100%] sm:basis-6/12 p-6 ps-0 flex flex-col items-center justify-center  ">
-                            <h3 class="mt-2 text-white font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
+                        <div class="basis-[100%] sm:basis-5/12 p-6 ps-0 flex flex-col items-center justify-center  ">
+                            <h3 class="mt-2 text-black font-mono font-bold text-2xl">{{userDetails?.name}}</h3>
                             <p class="font-semibold my-2">{{userDetails?.address?.street}},
                                 {{userDetails?.address?.city}}</p>
-                            <a class="cursor-pointer text-blue-400 hover:text-gray-400"><fa-icon class='text-gray-400' [icon]="faLink"></fa-icon> https://www.{{userDetails?.website}}</a>
+                            <p><fa-icon [icon]="faLink"></fa-icon> {{userDetails?.website}}</p>
                         </div>
                     </div>
                 </div>
-                <div class=" p-2 shadow-md">
+                <div class=" p-2 shadow-sm">
                     <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans mt-8">Company</h4>
-                    <div class="mb-5">
-                        <div class="h-full flex sm:flex-row items-center sm:justify-start ttext-left">
-                            <img alt="company image"
-                                class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
-                                src="../../../assets/images/max-bender-3rNvnnO7avY-unsplash.jpg" />
-                            <div class="flex-grow pl-8 text-white">
-                                <h2 class="title-font font-semibold text:sm sm:text-lg">{{ userDetails?.company?.name }} Ltd</h2>
-                                <h3 class="text-gray-500 mb-1 sm:mb-2 text-[0.7rem] sm:text-sm font-mono">{{ userDetails?.company?.catchPhrase }}</h3>
-                                <h5 class="text-gray-700">June 2015 - Present</h5>
+                    <div class="hero">
+                        <div class="h-full flex flex-row  items-center justify-start text-center">
+                            <img alt="team"
+                                class="flex-shrink-0 rounded-full w-20 h-20 object-cover object-center sm:mb-0 mb-4"
+                                [src]="'https://robohash.org/' + (userDetails?.username ? userDetails?.username : 'bret') + '?size=200x200&set=set3'" />
+                            <div class="flex-grow sm:pl-8 text-black">
+                                <h2 class="title-font font-medium text-lg">{{ userDetails?.company?.name }}</h2>
+                                <h3 class="text-gray-500 mb-3 font-mono">{{ userDetails?.company?.catchPhrase }}</h3>
                             </div>
                         </div>
                     </div>
@@ -45,10 +44,11 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab recusandae magnam, sint, id minus
                         nobis atque
                         qui magni, accusamus possimus alias. Excepturi doloremque, voluptate exercitationem quod aliquam
-                        e</p>
+                        enim illum
+                        id.</p>
                 </div>
             </div>
-            <div class="p-5">
+            <div class="p-4 sm:p-0">
                 <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans">About</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maxime voluptate inventore neque
                     excepturi?
@@ -56,10 +56,10 @@
                     magni
                     dolor.</p>
                 <h4 class="my-2 text-lg text-blue-700 font-semibold font-sans">Contact Info</h4>
-                <p><fa-icon [icon]="faLocationDot"></fa-icon> {{userDetails?.address?.suite}},{{userDetails?.address?.street}}, {{userDetails?.address?.city}}.
+                <p>{{userDetails?.address?.suite}},{{userDetails?.address?.street}}, {{userDetails?.address?.city}}.
                     {{userDetails?.address?.zipcode}}</p>
-                <p class="my-2"><fa-icon [icon]="faEnvelope" /> {{userDetails?.email}}</p>
-                <p><fa-icon [icon]="faPhone" /> {{userDetails?.phone}}</p>
+                <p class="my-2">{{userDetails?.email}}</p>
+                <p>{{userDetails?.phone}}</p>
             </div>
 
         </div>

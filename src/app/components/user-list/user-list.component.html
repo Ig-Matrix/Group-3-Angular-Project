@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
-<section class="text-gray-400 body-font bg-black">
+<section class="text-gray-400 body-font">
   <div class="container px-5 mx-auto">
-    <h1 class="font-bold text-3xl text-white my-4">{{title}}</h1>
+    <h1 class="font-bold text-3xl text-black my-4">{{title}}</h1>
 
     <app-search (searchTextChange)="onSearchTextEntered($event)"></app-search>
     @if (isLoading) {
